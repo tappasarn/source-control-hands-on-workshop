@@ -49,3 +49,6 @@ You will see the following lines shows up on your terminal.
 
 Those lines on the image above are saying that now `README2.md` is now being tracked by Git and now it is waiting in the `staging` area (we will talk about `stage` later in this workshop). To prove that Git has already begun its tracking on `README2.md` let's add a second line into the file. And then, type `git state` command.
 
+![change-to-stage-file](https://user-images.githubusercontent.com/11821799/51422588-c0578c80-1be3-11e9-868a-b47fa534ee19.png)
+
+Notice that Git knows about the new change that was added to `README2.md`. However, it does not put `README2.md` into untracked section like it did when we first added the file with our name on the first line.
