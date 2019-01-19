@@ -42,3 +42,10 @@ git add README2.md
 # then run this
 git status
 ```
+
+You will see the following lines shows up on your terminal.
+
+![staged-new-file](https://user-images.githubusercontent.com/11821799/51422528-af5a4b80-1be2-11e9-8f68-2d474131a242.png)
+
+Those lines on the image above are saying that now `README2.md` is now being tracked by Git and now it is waiting in the `staging` area (we will talk about `stage` later in this workshop). To prove that Git has already begun its tracking on `README2.md` let's add a second line into the file. And then, type `git state` command.
+
