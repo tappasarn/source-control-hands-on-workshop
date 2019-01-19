@@ -26,4 +26,19 @@ Git uses `Distributed Version Control Systems` as it structure so the history of
 The advantage of Distributed Version Control Systems that Git uses is that all of the team members have their own *full* history of the project. If the server dies, or lost the project's history, any of the member local project can be copied back to the server without any lost. 
 
 ### Work on the local space
+Next step, let's add a new file into the project. On this current directory add a new file called `README2.md`. Under that file, just simple type you name into the file. Now go to `terminal` and type `git status` and you will see the following.
 
+![untracked-file](https://user-images.githubusercontent.com/11821799/51422310-00684080-1bdf-11e9-8285-59fdedd4425e.png)
+
+#### Untracked File
+
+Since `README2.md` is newly created, for sure, Git will not see it in the latest snapshot history of the project so Git puts `README2.md` into untracked state.
+
+Next step, run the following command
+```sh
+# run this first
+git add README2.md
+
+# then run this
+git status
+```
