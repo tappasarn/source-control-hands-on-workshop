@@ -4,6 +4,9 @@
 
 * [Slide](#Slide)
 * [Overall Git's structure](#Overall-Git's-structure)
+* [Remote VS Local](#Remote-VS-Local)
+* [Untracked files](#Untracked-Files)
+* [Tracked Files](#Tracked-Files)
 
 ## Slide
 https://docs.google.com/presentation/d/1cCGnm1pLVwWVn6EGceNRsQSW8wvKztiTQKo3kP4yGHU/edit?usp=sharing
@@ -30,7 +33,7 @@ Next step, let's add a new file into the project. On this current directory add 
 
 ![untracked-file](https://user-images.githubusercontent.com/11821799/51422310-00684080-1bdf-11e9-8285-59fdedd4425e.png)
 
-#### Untracked File
+#### Untracked Files
 
 Since `README2.md` is newly created, for sure, Git will not see it in the latest snapshot history of the project so Git puts `README2.md` into untracked state.
 
@@ -52,3 +55,21 @@ Those lines on the image above are saying that now `README2.md` is now being tra
 ![change-to-stage-file](https://user-images.githubusercontent.com/11821799/51422588-c0578c80-1be3-11e9-868a-b47fa534ee19.png)
 
 Notice that Git knows about the new change that was added to `README2.md`. However, it does not put `README2.md` into untracked section like it did when we first added the file with our name on the first line.
+
+#### Tracked Files
+Opposite to untracked files, tracked files are the files that Git knows from the latest snapshot history. Tracked files can be presented in 3 different types.
+
+* Unmodified
+* Modified
+* *Staged*
+
+You may notice that `Stage` part above is *italic* and seem different than `Unmodified` and `Modified` bullets. Let's make them all looks identical by removing ` *...* ` that right now surrounding the text of the last bullet. After you do so, again, run `git status` command on your terminal. 
+
+![Modified-readme](https://user-images.githubusercontent.com/11821799/51426458-d124f400-1c1d-11e9-89c3-267d6b2a6521.png)
+
+You should see that now you have changed the state of `README.md` from `Unmodified` to `Modified`.
+
+To stage tracked files, we use the same command as untracked files. Can you guess what it is ?
+
+#### Ready to commit
+
