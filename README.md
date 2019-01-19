@@ -75,4 +75,7 @@ To stage tracked files, we use the same command as untracked files. Can you gues
 ![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
 
 #### Ready to commit
+Committing means saving the files changes that are in staging area into the projects history. We usually do it when we have finished a logical unit of works. Let's say when I finish writing down this section, I would stage `README.md` into the staging area. Then make a commit with some useful message like `Finished Ready to commit section`.
 
+##### Staging area
+Most of the time, in the real code base you might have modified 10 files in the first 2 hours of work. However, only the first three files are related to `Date calculation logic` of your application. This is where `staging area` comes in handy. 
