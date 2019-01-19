@@ -71,5 +71,8 @@ You should see that now you have changed the state of `README.md` from `Unmodifi
 
 To stage tracked files, we use the same command as untracked files. Can you guess what it is ?
 
+##### Files life cycle summary
+![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
+
 #### Ready to commit
 
