@@ -164,3 +164,50 @@ You assume that LICENSE file is not useful so you decide to remove it.
 ```sh
 git checkout -- <file_path>
 ```
+
+### Collaboration
+Up until now, only you have committed changes to the project. In collaborative work as in large software development, there are teams working on the same repository. Git helps us to maintain the synchronized state of the project.
+
+#### Scenario 
+1. Go to your repository on Github.
+2. Add CONTRIBUTORS.md from Github's site with the following content `This project is written by Tappasarn A.`
+3. Since you start to collaborate on this project. You also want to update README2.md with your own name after the my name. 
+4. You see that this file is present on Github repository but not on you local machine.
+5. You must sync the project.
+
+#### Synchronize local and remote
+
+We are certain that there is `CONTRIBUTORS.md` file in our repository as we see in Github's website, but it is not visible in the local repository.
+
+First, check status of the our repository using
+
+```sh
+git status
+```
+
+The output indicates that we are in sync with the remote repository (origin) as below.
+```
+Your branch is up-to-date with 'origin/master'
+```
+
+Why ? 😭
+
+Changes made in remote repository is not known to the local repository until you tell Git to explicitly fetch the changes. Run,
+
+```sh
+git fetch
+```
+
+Now, if you run `git status` again. You will see ....
+```
+Your branch is behind 'origin/master' by 1 commit, ....
+```
+
+This tells us that there is a change on remote repository that is not in our local repository. In this case it is CONTRIBUTORS.md
+
+To bring this change into our local repository. Run...
+
+```sh
+git pull
+```
+
