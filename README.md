@@ -138,7 +138,7 @@ git push -u origin master
 
 Refresh your browser to see that your local machine is in sync with Github's server.
 
-### Revert you change
+### Undo *committed* change
 As we been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduce in the project and you want to traverse back in time.
 
 #### Exercise
@@ -149,8 +149,18 @@ You assume that LICENSE file is not useful so you decide to remove it.
 2. Make a commit with message "remove unused file".
 3. Push it to Github.
 
-#### Git revert
+#### Revert a commit
 1. Use `git log` to see the history of the project.
 2. Get the commit id of the commit where the LICENSE file is removed.
 3. run command `git revert <commit id>`
 4. Commit and push the change
+
+#### Undo un-committed change
+1. Select all content of README.md file. (ctrl + a)
+2. Close your editor window
+3. *Take a break*
+
+#### Discard changes
+```sh
+git checkout -- <file_path>
+```
