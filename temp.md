@@ -1,21 +1,3 @@
-# SOURCE CONTROL HANDS ON WORKSHOP
-
-## Table of content
-
-* [Slide](#Slide)
-* [Overall Git's structure](#Overall-Git's-structure)
-* [Remote VS Local](#Remote-VS-Local)
-* [Untracked files](#Untracked-Files)
-* [Tracked Files](#Tracked-Files)
-
-## Slide
-https://docs.google.com/presentation/d/1cCGnm1pLVwWVn6EGceNRsQSW8wvKztiTQKo3kP4yGHU/edit?usp=sharing
-
-### Key words from the slide
-* Source Control
-* Git
-* GitHub
-
 ## Overall Git's structure
 We now know that the practice of using source control is very beneficial to the project. However, it would not be a clever idea if you have to create your own version control system. And this is where Git shines.
 
@@ -84,5 +66,3 @@ git commit -m "remove italic from the last bullet of tracked files section"
 ```
 
 And that was done, your first commit ! 
- 
-
