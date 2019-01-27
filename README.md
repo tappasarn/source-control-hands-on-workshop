@@ -132,7 +132,8 @@ Right now if we take a look at the repository on Github, we will see that it is 
 ```sh
 git push -u origin master
 ```
-*`-u` in the command link our `master` with the `master` copy on Github server* 
+*`-u` in the command link our `master` with the `master` copy on Github server. You only need to use it on the first time that you push new `branch` to the server* 
+
 
 Refresh your browser to see that your local machine is in sync with Github's server.
 
