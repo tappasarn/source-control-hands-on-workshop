@@ -127,15 +127,30 @@ git remote add origin <remote_address>
 After you finish with the command above. Your git on the local project will knows which repository on Github server that it need to be linked with.
 
 #### 6. Pushing the repository into Github server
-Right now if we take a look at the repository on Github, we will see that it is empty. Since there is no code that has been copied from our local machine into the remote space. We will add them using them following command.
+Right now if you look at the repository on Github, you will see that it is empty. Since there is no code that has been copied from our local machine into the remote space. We will add them using them following command.
 
 ```sh
 git push -u origin master
 ```
 *`-u` in the command link our `master` with the `master` copy on Github server. You only need to use it on the first time that you push new `branch` to the server* 
 
+(Windows) You might be asked to login after execute the command above. Just enter your Github's username and password.
 
 Refresh your browser to see that your local machine is in sync with Github's server.
 
+### Revert you change
+As we been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduce in the project and you want to traverse back in time.
 
+#### Exercise
 
+You assume that LICENSE file is not useful so you decide to remove it.
+
+1. Delete LICENSE file.
+2. Make a commit with message "remove unused file".
+3. Push it to Github.
+
+#### Git revert
+1. Use `git log` to see the history of the project.
+2. Get the commit id of the commit where the LICENSE file is removed.
+3. run command `git revert <commit id>`
+4. Commit and push the change
