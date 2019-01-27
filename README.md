@@ -33,8 +33,8 @@ git status
 ### Untracked Files
 Untracked files are those files that are not recognized by Git. On our case, Git has just been added into the project that is the reason why it does not know any of the files here.
 
-#### Begin tracking
-In order to tell Git to start tracking the files using the `git add <file_path>` command.
+### Tracked Files
+Tracked files are files that Git keeps track of. In order for Git to start tracking the files, using `git add <file_path>` command.
 ```sh
 git add README.md
 git add LICENSE
@@ -43,10 +43,10 @@ To verify that `LICENSE` and `README.md` are known by Git. Run the command `git 
 
 ![git-status-new-file](https://user-images.githubusercontent.com/4034609/51797637-afd59080-2239-11e9-8cdc-ccf050d6e06c.png)
 
-### Changes to be committed
+#### Changes to be committed
 After you added files with `git add <file path>`, those files will be put in the area call `staging`. This area is used to group related logical changes together. In this case, our logical change is "Project Initialization".
 
-### Create your first commit
+#### Create your first commit
 `Commit` is the action where changes are saved as a version into the history of the project that is being control by Git. To commit the changes,
 
 ```sh
@@ -76,4 +76,9 @@ Date:   Sun Jan 27 13:20:15 2019 +0700
     Project Initialization
 ```
 
-### Files
+### Modified Files
+*Git does not just track the creation and deletion of files. It also reports the changes that happen to the files that are already present in its history.*
+
+For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surround the content.
+
+After remove them, save the file and run `git status` again.
