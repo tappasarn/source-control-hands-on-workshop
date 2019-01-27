@@ -82,3 +82,10 @@ Date:   Sun Jan 27 13:20:15 2019 +0700
 For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surround the content.
 
 After remove them, save the file and run `git status` again.
+
+![modified-files](https://user-images.githubusercontent.com/4034609/51798170-02ff1180-2241-11e9-8c51-259a7cabba58.png)
+
+Next, to save this change. You will have to add `README.md` into the staging area and then make a commit. Let's see if you can do it without our help. 
+
+### Files life cycle summary
+![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
