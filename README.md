@@ -4,6 +4,7 @@
 
 * [Slide](#Slide)
 * [Adding Git into your project](#Adding-Git-into-your-project)
+* [Files status](#Files-status)
 
 ## Slide
 https://docs.google.com/presentation/d/1cCGnm1pLVwWVn6EGceNRsQSW8wvKztiTQKo3kP4yGHU/edit?usp=sharing
@@ -31,7 +32,7 @@ git status
 
 ## Files status
 ### Untracked Files
-Untracked files are those files that are not recognized by Git. On our case, Git has just been added into the project that is the reason why it does not know any of the files here.
+Untracked files are files that are not recognized by Git. In our case, Git has just been added into the project that is the reason why it does not know any of the files here.
 
 ### Tracked Files
 Tracked files are files that Git keeps track of. In order for Git to start tracking the files, using `git add <file_path>` command.
@@ -89,3 +90,51 @@ Next, to save this change. You will have to add `README.md` into the staging are
 
 ### Files life cycle summary
 ![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
+
+## Putting the project on remote server
+Git can work fine on your local machine. However, there are situations that remote server can provide a grater benefits.
+
+2 main drawback of working only on local machine are 
+* Risk of losing the code.
+* Very difficult to collaborate with teammate.
+
+Now, let's put our code up on Github server. Recalled that you already registered Github's account at the end of the presentation.
+
+### Create a new Github repository
+You can think of a repository as a place on Github's server that is available to store and look for your project.
+
+#### 1. Go to https://www.github.com
+
+
+#### 2. Click at New
+![create-new-repository](https://user-images.githubusercontent.com/11821799/51798604-df8b9500-2247-11e9-901f-55f0f7f35c4d.png)
+
+#### 3. Enter the name `source-control-hands-on-workshop` for Repository Name
+
+#### 4. Click Create Repository
+At this point, you will have a git repository on Github's server ready for storing your local copy. You will see instructions to either create a repository or push an existing repository.
+
+#### 5. Add remote server
+Follow the instructions under a section that says  
+"…or push an existing repository from the command line"
+
+For now, execute only the first line.
+
+```sh
+git remote add origin <remote_address>
+```
+
+After you finish with the command above. Your git on the local project will knows which repository on Github server that it need to be linked with.
+
+#### 6. Pushing the repository into Github server
+Right now if we take a look at the repository on Github, we will see that it is empty. Since there is no code that has been copied from our local machine into the remote space. We will add them using them following command.
+
+```sh
+git push -u origin master
+```
+*`-u` in the command link our `master` with the `master` copy on Github server* 
+
+Refresh your browser to see that your local machine is in sync with Github's server.
+
+
+
