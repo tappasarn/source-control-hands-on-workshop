@@ -279,13 +279,11 @@ Now, the `*` should be in front of your <branch_name>
 ###### Workshop
 1) Create a new branch called `remove-readme`
 2) After that, make sure you switch to a new branch
-3) Remove `README.md`
+3) Remove `README.md` and make a commit
 4) Push and create upstream for this branch. (You did it once in the beginning of the workshop.)
 5) What if you want to update master branch with this change ?
 
 ### Reverting changes
 At this point, your should merge your `remove-readme` branch with `master` branch and push the change. `README.md` will be gone from your repository from both `remote` and `local`. It is important to bring the file back since it contains many important information about this workshop.
 
-
-
-
+Do you recall how to revert a commit ?
