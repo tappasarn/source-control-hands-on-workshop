@@ -205,9 +205,87 @@ Your branch is behind 'origin/master' by 1 commit, ....
 
 This tells us that there is a change on remote repository that is not in our local repository. In this case it is CONTRIBUTORS.md
 
-To bring this change into our local repository. Run...
+To bring remove changes into our local repository, Run...
 
 ```sh
+git merge origin/master
+```
+
+Notice that it takes 2 commands to sync your branch with the one on the remote server. Since this is an action that developers do so often, Git provides us with the command that combines fetch and merge together.
+```sh
+# notice that you can only use git pull to merge from the same branch
+# we will cover git branching concept in the later chapter
 git pull
 ```
+
+#### Merge conflict
+It is also possible that remote and local repository were being edited on the same spot. With scenario like this Git needs your help to resolve conflicts.
+
+#### Scenario
+1) Make another edit on the `CONTRIBUTORS.md` by adding your university name after the contributors.
+2) Make a commit (do not push yet)
+3) Again, visit `github.com` and add one more contributor name at the end on the `CONTRIBUTORS.md` file.
+4) Commit the change from github's website.
+5) Back to your local repository, now you can try to push the commit you just made on step 2.
+6) Git will tell you that pushing process is facing some problem. Can you make a guess what is wrong ?
+
+#### Resolving merge conflict
+
+// Add image from GitBash showing message about merge conflict
+// Add image from editor
+
+Now you will need to help git makes decision on how the file suppose to be like.
+
+After you helped git `resolves` the `conflicts`, if you run `git status` command it will report that the state of `CONTRIBUTORS.md` is now at `modified`.
+
+You would want this file to be on the `staging` area with other files.  
+
+Do you Remember the command to make this happen ?
+
+#### Branching
+In the real project, there will be many developers are working on the same code base. It would be a very bad day if 5 people keep pushing there changes into the remote space. It is even worst if the push changes breaks the working project.
+
+Git provides `branch` feature to allows developers to **encapsulate changes** that they made. Each `branch` can exist in both `local` and `remote` repository. So each developer can be sure that the code they have written is secure and will not have effect on others' code.
+
+##### Branching Basics
+
+###### Creating a new branch
+
+To create a new branch, use
+```sh
+git branch <branch_name>
+```
+
+You can verify that you have created a branch using the command below. You should see the <branch_name> from the previous step shows up.
+
+```sh
+git branch
+```
+
+Notice the `*` in front of `master`. This indicates that you are now working in a workspace called `master`.
+
+
+You have now created a new branch. But, you have not switch your working space into the newly created one. `git status` command still reports that you are in `master branch`.
+
+```sh
+git checkout <branch_name>
+```
+
+Now, the `*` should be in front of your <branch_name>
+
+// Insert photo of (master) switched to (<branch_name>)
+
+
+###### Workshop
+1) Create a new branch called `remove-readme`
+2) After that, make sure you switch to a new branch
+3) Remove `README.md`
+4) Push and create upstream for this branch. (You did it once in the beginning of the workshop.)
+5) What if you want to update master branch with this change ?
+
+### Reverting changes
+At this point, your should merge your `remove-readme` branch with `master` branch and push the change. `README.md` will be gone from your repository from both `remote` and `local`. It is important to bring the file back since it contains many important information about this workshop.
+
+
+
 
