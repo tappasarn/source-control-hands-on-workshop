@@ -15,34 +15,35 @@ https://docs.google.com/presentation/d/1cCGnm1pLVwWVn6EGceNRsQSW8wvKztiTQKo3kP4y
 * GitHub
 
 ## Adding Git into your project
-* Right click at the folder you just extracted.
-* Click at `Git Bash here`.
-* Type command `git init` to start using Git in the following folder.
+* Change directory to where the extracted file is located.
+* Use command `git init` to initialize Git in the folder.
 
 After adding Git into the project. You want to ensure that Git begins to see changes in your project. You can verify such behavior by using the following command.
 
 ```sh
 git status
 ```
- On your bash screen, you should see something like the below image.
+You should see something like the below image.
 
- ![git-status](https://user-images.githubusercontent.com/4034609/51797523-e6aaa700-2237-11e9-8f04-50d640936fbb.png)
+ ![git-status](https://user-images.githubusercontent.com/4034609/53856161-6c71fd00-4003-11e9-8e0d-c63947e63588.png)
 
- Notice that here Git sees 2 new untracked files.
+ Notice that here Git sees 2 new **untracked files**.
 
 ## Files status
 ### Untracked Files
-Untracked files are files that are not recognized by Git. In our case, Git has just been added into the project that is the reason why it does not know any of the files here.
+Untracked files are files that are not recognized by Git.
 
 ### Tracked Files
-Tracked files are files that Git keeps track of. In order for Git to start tracking the files, using `git add <file_path>` command.
+Tracked files are files that Git keeps track of. In order for Git to start tracking the files, use the `git add <file_path>` command.
+
 ```sh
 git add README.md
 git add LICENSE
 ```
+
 To verify that `LICENSE` and `README.md` are known by Git. Run the command `git status` again to see the result.
 
-![git-status-new-file](https://user-images.githubusercontent.com/4034609/51797637-afd59080-2239-11e9-8cdc-ccf050d6e06c.png)
+![git-status-new-file](https://user-images.githubusercontent.com/4034609/53856216-9cb99b80-4003-11e9-8f5f-2268205a605f.png)
 
 #### Changes to be committed
 After you added files with `git add <file path>`, those files will be put in the area call `staging`. This area is used to group related logical changes together. In this case, our logical change is "Project Initialization".
@@ -84,7 +85,7 @@ For example the content above is italic by mistake. You can easily fix them by r
 
 After remove them, save the file and run `git status` again.
 
-![modified-files](https://user-images.githubusercontent.com/4034609/51798170-02ff1180-2241-11e9-8c51-259a7cabba58.png)
+![modified-files](https://user-images.githubusercontent.com/4034609/53857226-f3c16f80-4007-11e9-92ae-b364a15beebb.png)
 
 Next, to save this change. You will have to add `README.md` into the staging area and then make a commit. Let's see if you can do it without our help. 
 
@@ -138,10 +139,12 @@ git push -u origin master
 
 Refresh your browser to see that your local machine is in sync with Github's server.
 
-### Undo *committed* change
-As we been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduce in the project and you want to traverse back in time.
+# Make use of Git
 
-#### Exercise
+## Undoing *committed* change
+As we been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduced in the project and you want to traverse back in time.
+
+### Exercise
 
 You assume that LICENSE file is not useful so you decide to remove it.
 
@@ -151,13 +154,13 @@ You assume that LICENSE file is not useful so you decide to remove it.
 
 #### Revert a commit
 1. Use `git log` to see the history of the project.
-2. Get the commit id of the commit where the LICENSE file is removed.
+2. Get the commit id(hash) of the commit where the LICENSE file is removed.
 3. run command `git revert <commit id>`
 4. Commit and push the change
 
-#### Undo un-committed change
-1. Select all content of README.md file. (ctrl + a)
-2. Close your editor window
+## Undo un-committed change
+1. Delete all content of README.md file.
+2. Save and close your editor window
 3. *Take a break*
 
 #### Discard changes
@@ -165,13 +168,13 @@ You assume that LICENSE file is not useful so you decide to remove it.
 git checkout -- <file_path>
 ```
 
-### Collaboration
+# Collaboration
 Up until now, only you have committed changes to the project. In collaborative work as in large software development, there are teams working on the same repository. Git helps us to maintain the synchronized state of the project.
 
 #### Scenario 
 1. Go to your repository on Github.
 2. Add CONTRIBUTORS.md from Github's site with the following content `This project is written by Tappasarn A.`
-3. Since you start to collaborate on this project. You also want to update README2.md with your own name after the my name. 
+3. Since you start to collaborate on this project. You also want to update CONTRIBUTORS.md with your own name after the my name. 
 4. You see that this file is present on Github repository but not on you local machine.
 5. You must sync the project.
 
