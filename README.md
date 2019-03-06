@@ -15,10 +15,7 @@ https://docs.google.com/presentation/d/1cCGnm1pLVwWVn6EGceNRsQSW8wvKztiTQKo3kP4y
 * GitHub
 
 ## Adding Git into your project
-* Change directory to where the extracted file is located.
-* Use command `git init` to initialize Git in the folder.
-
-After adding Git into the project. You want to ensure that Git begins to see changes in your project. You can verify such behavior by using the following command.
+Change jaaa
 
 ```sh
 git status
@@ -172,11 +169,7 @@ git checkout -- <file_path>
 Up until now, only you have committed changes to the project. In collaborative work as in large software development, there are teams working on the same repository. Git helps us to maintain the synchronized state of the project.
 
 #### Scenario 
-1. Go to your repository on Github.
-2. Add CONTRIBUTORS.md from Github's site with the following content `This project is written by Tappasarn A.`
-3. Since you start to collaborate on this project. You also want to update CONTRIBUTORS.md with your own name after the my name. 
-4. You see that this file is present on Github repository but not on you local machine.
-5. You must sync the project.
+Another changes ja
 
 #### Synchronize local and remote
 
