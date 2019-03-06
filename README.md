@@ -234,8 +234,11 @@ It is also possible that remote and local repository were being edited on the sa
 
 #### Resolving merge conflict
 
-// Add image from GitBash showing message about merge conflict
-// Add image from editor
+In terminal,
+![](https://user-images.githubusercontent.com/4034609/53858579-5d904800-400d-11e9-82b7-5eb16c1ca2fb.png)
+
+In text editor,
+![](https://user-images.githubusercontent.com/4034609/53858735-dd1e1700-400d-11e9-82cd-7d83b6d73205.png)
 
 Now you will need to help git makes decision on how the file suppose to be like.
 
@@ -276,10 +279,13 @@ git checkout <branch_name>
 
 Now, the `*` should be in front of your <branch_name>
 
-// Insert photo of (master) switched to (<branch_name>)
+```sh
+  master
+* <branch_name>
+```
 
 
-###### Workshop
+# Workshop
 1) Create a new branch called `remove-readme`
 2) After that, make sure you switch to a new branch
 3) Remove `README.md` and make a commit
