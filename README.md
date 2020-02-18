@@ -271,9 +271,9 @@ In terminal,
 In text editor,
 ![](https://user-images.githubusercontent.com/4034609/53858735-dd1e1700-400d-11e9-82cd-7d83b6d73205.png)
 
-Now you will need to help git makes decision on how the file suppose to be like.
+Now, you will need to help git makes decision on how the file suppose to be like.
 
-After you helped git `resolves` the `conflicts`, if you run `git status` command it will report that the state of `CONTRIBUTORS.md` is now at `modified`.
+After you helped git **resolves** the **conflicts**, if you run `git status` command it will report that the state of `CONTRIBUTORS.md` is now at `modified`.
 
 You would want this file to be on the `staging` area with other files.
 
@@ -281,9 +281,13 @@ Do you Remember the command to make this happen ?
 
 #### Branching
 
-In the real project, there will be many developers are working on the same code base. It would be a very bad day if 5 people keep pushing there changes into the remote space. It is even worst if the push changes breaks the working project.
+In the real project, there will be many developers are working on the same code base.
 
-Git provides `branch` feature to allows developers to **encapsulate changes** that they made. Each `branch` can exist in both `local` and `remote` repository. So each developer can be sure that the code they have written is secure and will not have effect on others' code.
+It would be a very bad day if 5 people keep pushing there changes into the remote space. It is even worst if the push changes breaks the working project.
+
+Git provides `branch` feature to allows developers to **encapsulate changes** that they made. Each `branch` can exist in both `local` and `remote` repository.
+
+So each developer can be sure that the code they have written is secure and will not have effect on others' code.
 
 ##### Branching Basics
 
@@ -326,6 +330,10 @@ Now, the `*` should be in front of your <branch_name>
 
 ### Reverting changes
 
-At this point, your should merge your `remove-readme` branch with `master` branch and push the change. `README.md` will be gone from your repository from both `remote` and `local`. It is important to bring the file back since it contains many important information about this workshop.
+At this point, your should merged your `remove-readme` branch with `master` branch and pushed the change.
+
+`README.md` will be deleted from your repository both at `remote` and `local`.
+
+It is important to bring the file back since it contains many important information about this workshop.
 
 Do you recall how to revert a commit ?
