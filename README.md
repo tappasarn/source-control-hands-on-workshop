@@ -277,7 +277,7 @@ If you run `git status` command it will show `CONTRIBUTORS.md` as `modified`.
 
 In order to stay in sync with the remote repository. You would want to _stage_ and _commit_ changes from remote repository to your local repository.
 
-How would you do that? (Hint [File Lifecycle Summary](#files-life-cycle-summary))
+How would you do that? Make sure to complete this before moving on.
 
 #### Branching
 
