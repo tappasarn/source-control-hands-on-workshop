@@ -58,7 +58,7 @@ After you added files with `git add <file path>`, those files will be put in the
 
 #### Create your first commit
 
-`Commit` is the action where changes are saved as a version into the history of the project that is being control by Git. To commit the changes,
+`Commit` is the action where changes are saved as a version into the history of the project that is being controlled by Git. To commit the changes,
 
 ```sh
 git commit -m "Project Initialization"
@@ -93,7 +93,7 @@ Date:   Sun Jan 27 13:20:15 2019 +0700
 
 _Git does not just track the creation and deletion of files. It also reports the changes that happen to the files that are already present in its history._
 
-For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surround the content.
+For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surrounded the content.
 
 After remove them, save the file and run `git status` again.
 
@@ -107,9 +107,9 @@ Next, to save this change. You will have to add `README.md` into the staging are
 
 ## Putting the project on remote server
 
-Git can work fine on your local machine. However, there are situations that remote server can provide a grater benefits.
+Git can work fine on your local machine. However, there are situations that remote server can provide the grater benefits.
 
-2 main drawback of working only on local machine are
+2 main drawbacks of working only on the local machine are
 
 - Risk of losing the code.
 - Very difficult to collaborate with teammate.
@@ -134,7 +134,7 @@ At this point, you will have a git repository on Github's server ready for stori
 
 #### 5. Add remote server
 
-Follow the instructions under a section that says  
+Follow the instructions under the section that says  
 "…or push an existing repository from the command line"
 
 For now, execute only the first line.
@@ -143,11 +143,11 @@ For now, execute only the first line.
 git remote add origin <remote_address>
 ```
 
-After you finish with the command above. Your git on the local project will know which repository on Github server that it needs to be linked with.
+After you finish with the command above. Your git on the local project will know which repository on Github server that needs to be linked with.
 
 #### 6. Pushing the repository into Github server
 
-Right now if you look at the repository on Github, you will see that it is empty. Since there is no code that has been copied from our local machine into the remote space. We will add them using them following command.
+Right now if you look at the repository on Github, you will see that it is empty. Since there is no code that has been copied from our local machine into the remote space. We will add them using the following command.
 
 ```sh
 git push -u origin master
@@ -163,7 +163,7 @@ Refresh your browser to see that your local machine is in sync with Github's ser
 
 ## Undoing _committed_ change
 
-As we been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduced in the project and you want to traverse back in time.
+As we have been mentioning since the beginning of the presentation. One of the most important benefit of using Git is the ability to see the history of your project. This will become very useful when mistake is introduced in the project and you want to traverse back in time.
 
 ### Exercise
 
@@ -201,14 +201,14 @@ Up until now, only you have committed changes to the project. In collaborative w
 1. Go to your repository on Github.
 2. Add CONTRIBUTORS.md from Github's site with the following content `This project is written by Tappasarn A.`
 3. Since you start to collaborate on this project. You also want to update CONTRIBUTORS.md with your own name after the my name.
-4. You see that this file is present on Github repository but not on you local machine.
+4. You see that this file is presented on Github repository but not on you local machine.
 5. You must sync the project.
 
 #### Synchronize local and remote
 
 We are certain that there is `CONTRIBUTORS.md` file in our repository as we see in Github's website, but it is not visible in the local repository.
 
-First, check status of the our repository using
+First, check the status of the our repository using
 
 ```sh
 git status
@@ -252,7 +252,7 @@ git pull
 
 #### Merge conflict
 
-It is also possible that remote and local repository were being edited on the same spot. With scenario like this Git needs your help to resolve conflicts.
+It is also possible that remote and local repository are being edited on the same spot. With the scenario like, this Git needs your help to resolve conflicts.
 
 #### Scenario
 
@@ -281,13 +281,13 @@ How would you do that? Make sure to complete this before moving on.
 
 #### Branching
 
-In the real project, there will be many developers are working on the same code base.
+In the real project, there will be many developers working on the same code base.
 
-It would be a very bad day if 5 people keep pushing there changes into the remote space. It is even worst if the push changes breaks the working project.
+It would be a very bad day if 5 people keep pushing their changes into the remote space. It is even worse if the push changes break the working project.
 
-Git provides `branch` feature to allows developers to **encapsulate changes** that they made. Each `branch` can exist in both `local` and `remote` repository.
+Git provides `branch` feature to allow developers to **encapsulate changes** that they made. Each `branch` can exist in both `local` and `remote` repository.
 
-So each developer can be sure that the code they have written is secure and will not have effect on others' code.
+So each developer can be sure that the code they have written is secured and will not affect on others' code.
 
 ##### Branching Basics
 
@@ -307,7 +307,7 @@ git branch
 
 Notice the `*` in front of `master`. This indicates that you are now working in a workspace called `master`.
 
-You have now created a new branch. But, you have not switch your working space into the newly created one. `git status` command still reports that you are in `master branch`.
+You have now created a new branch. But, you have not switched your working space into the newly created one. `git status` command still reports that you are in `master branch`.
 
 ```sh
 git checkout <branch_name>
@@ -330,7 +330,7 @@ Now, the `*` should be in front of your <branch_name>
 
 ### Reverting changes
 
-At this point, your should merged your `remove-readme` branch with `master` branch and pushed the change.
+At this point, your should merged your `remove-readme` branch with `master` branch and push the change.
 
 `README.md` will be deleted from your repository both at `remote` and `local`.
 
