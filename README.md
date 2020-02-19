@@ -271,13 +271,13 @@ In terminal,
 In text editor,
 ![](https://user-images.githubusercontent.com/4034609/53858735-dd1e1700-400d-11e9-82cd-7d83b6d73205.png)
 
-Now, you will need to help git makes decision on how the file suppose to be like.
+Now, you will help Git deciding on how the file supposes to be like. Now, you will help Git deciding on how the file supposes to be like. You remove the Git's markers (`<<<<<<<<`, `>>>>>>>`, `========`) and remove unneeded lines. Then, save the file.
 
-After you helped git **resolves** the **conflicts**, if you run `git status` command it will report that the state of `CONTRIBUTORS.md` is now at `modified`.
+If you run `git status` command it will show `CONTRIBUTORS.md` as `modified`.
 
-You would want this file to be on the `staging` area with other files.
+In order to stay in sync with the remote repository. You would want to _stage_ and _commit_ changes from remote repository to your local repository.
 
-Do you Remember the command to make this happen ?
+How would you do that? (Hint [File Lifecycle Summary](#files-life-cycle-summary))
 
 #### Branching
 
