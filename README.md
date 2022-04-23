@@ -378,11 +378,6 @@ Now, the `*` should be in front of your <branch_name>
 * <branch_name>
 ```
 
-# Workshop
-
-1. Create a new branch called `remove-readme`
-2. After that, make sure you switch to a new branch
-3. Remove `README.md` and make a commit
-4. Push and create upstream for this branch. (You did it once in the beginning of the workshop.)
-5. What if you want to update master branch with this change ?
-6. How do you know that your changes are ready ?
+# Software Quality Assurance
+- What if you want to update master branch with this change ?
+- How do you know that your changes are ready ?
