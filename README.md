@@ -334,6 +334,7 @@ So each developer can be sure that the code they have written is secured and wil
 
 ##### Branching Basics
 Basic tax application example
+
 ![branching](https://user-images.githubusercontent.com/11821799/164887856-369bd591-2439-40bd-86b0-9bd4db3ac42a.png)
 
 This is an example of a government website project where it manages tax of Thai citizens.
