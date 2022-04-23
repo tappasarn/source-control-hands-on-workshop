@@ -56,6 +56,8 @@ To verify that `LICENSE` and `README.md` are known by Git. Run the command `git 
 
 After you added files with `git add <file path>`, those files will be put in the area call `staging`. This area is used to group related logical changes together. In this case, our logical change is "Project Initialization".
 
+In short, you can think of `staging` as a group of prepared changes for your next commit.
+
 #### Create your first commit
 
 `Commit` is the action where changes are saved as a version into the history of the project that is being controlled by Git. To commit the changes,
@@ -89,11 +91,13 @@ Date:   Sun Jan 27 13:20:15 2019 +0700
     Project Initialization
 ```
 
+At this point `commit` command has done its job, which is to store your changes in `git repository`.
+
 ### Modified Files
 
 _Git does not just track the creation and deletion of files. It also reports the changes that happen to the files that are already present in its history._
 
-For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surrounded the content.
+For example the content above is italic by mistake. You can easily fix them by removing `_...._` that is currently surrounded the content.
 
 After remove them, save the file and run `git status` again.
 
@@ -101,9 +105,30 @@ After remove them, save the file and run `git status` again.
 
 Next, to save this change. You will have to add `README.md` into the staging area and then make a commit. Let's see if you can do it without our help.
 
+### Illustration showing a set of files being move from modified to commit
+
+![modified](https://user-images.githubusercontent.com/11821799/164883039-62972412-cbac-4c05-90a1-11439d83c012.png)
+![staged](https://user-images.githubusercontent.com/11821799/164883046-7885eb2b-9b48-4c69-a2e4-ac54dc97d023.png)
+![commited](https://user-images.githubusercontent.com/11821799/164883086-134b04a1-099c-4a6d-80b1-7640b0481347.png)
+
 ### Files life cycle summary
 
 ![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
+
+### Terminologies and commands summary
+#### Commands
+- `git init` : `adding` git into your project
+- `git add` : moving files from `untracked` or `modified` to `staging` area.
+- `git commit` : `saving` your changes into git timeline.
+- `git log` : list out previous commits in historical order.
+- `git status` : displays files that have differences between the current values in your directory and the latest commit
+
+#### Terminologies
+- `untracked` : unknown changes/files from git's point of view.
+- `staged` : changes prepared in the staging area for your next commit.
+- `committed` : changes stored in your git repository.
+- `modified` : changes made to your project working directory.
+
 
 ## Putting the project on remote server
 
