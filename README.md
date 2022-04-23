@@ -5,6 +5,9 @@
 - [Slide](#Slide)
 - [Adding Git into your project](#Adding-Git-into-your-project)
 - [Files status](#Files-status)
+- [Putting the project on remote server](#Putting-the-project-on-remote-server)
+- [Undoing change](#Make-use-of-Git)
+- [Collaboration](#Collaboration)
 
 ## Slide
 
