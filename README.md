@@ -218,7 +218,6 @@ What just happen was you made the mistake and already committed to that mistake.
 
 1. Delete all content of README.md file.
 2. Save and close your editor window
-3. _Take a break_
 
 #### Discard changes
 
@@ -334,6 +333,21 @@ Git provides `branch` feature to allow developers to **encapsulate changes** tha
 So each developer can be sure that the code they have written is secured and will not affect on others' code.
 
 ##### Branching Basics
+Basic tax application example
+![branching](https://user-images.githubusercontent.com/11821799/164887856-369bd591-2439-40bd-86b0-9bd4db3ac42a.png)
+
+This is an example of a government website project where it manages tax of Thai citizens.
+The website is working fine. However, as the new year has begun. The citizens have to submit their tax form to the government.
+
+Due to COVID-19 situation, the government has updated their refund policy. At the same time, in parallel they are also preparing for the coming year new post-COVID-19 tax calculation method.
+
+The website is running base on the `master` branch. We cannot risk of having the website break because this is an important website that Thai citizens need to come and look up the information to prepare the tax document.
+
+Two developer create their own branch `2021` and `2022` to work on their part from the latest code of `master`.
+
+The branching mechanism ensures that both developers have the latest code of the running website as their base to build whatever they need.
+
+While also ensuring that their change will not take any effect until they are ready to. 
 
 ###### Creating a new branch
 
@@ -371,13 +385,4 @@ Now, the `*` should be in front of your <branch_name>
 3. Remove `README.md` and make a commit
 4. Push and create upstream for this branch. (You did it once in the beginning of the workshop.)
 5. What if you want to update master branch with this change ?
-
-### Reverting changes
-
-At this point, your should merged your `remove-readme` branch with `master` branch and push the change.
-
-`README.md` will be deleted from your repository both at `remote` and `local`.
-
-It is important to bring the file back since it contains many important information about this workshop.
-
-Do you recall how to revert a commit ?
+6. How do you know that your changes are ready ?
