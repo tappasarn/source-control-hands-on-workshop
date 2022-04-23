@@ -56,6 +56,8 @@ To verify that `LICENSE` and `README.md` are known by Git. Run the command `git 
 
 After you added files with `git add <file path>`, those files will be put in the area call `staging`. This area is used to group related logical changes together. In this case, our logical change is "Project Initialization".
 
+In short, you can think of `staging` as a group of prepared changes for your next commit.
+
 #### Create your first commit
 
 `Commit` is the action where changes are saved as a version into the history of the project that is being controlled by Git. To commit the changes,
@@ -89,11 +91,13 @@ Date:   Sun Jan 27 13:20:15 2019 +0700
     Project Initialization
 ```
 
+At this point `commit` command has done its job, which is to store your changes in `git repository`.
+
 ### Modified Files
 
 _Git does not just track the creation and deletion of files. It also reports the changes that happen to the files that are already present in its history._
 
-For example the content above is italic by mistake. You can easily fix them by removing `*....*` that is currently surrounded the content.
+For example the content above is italic by mistake. You can easily fix them by removing `_...._` that is currently surrounded the content.
 
 After remove them, save the file and run `git status` again.
 
@@ -101,9 +105,30 @@ After remove them, save the file and run `git status` again.
 
 Next, to save this change. You will have to add `README.md` into the staging area and then make a commit. Let's see if you can do it without our help.
 
+### Illustration showing a set of files being move from modified to commit
+
+![modified](https://user-images.githubusercontent.com/11821799/164883039-62972412-cbac-4c05-90a1-11439d83c012.png)
+![staged](https://user-images.githubusercontent.com/11821799/164883046-7885eb2b-9b48-4c69-a2e4-ac54dc97d023.png)
+![commited](https://user-images.githubusercontent.com/11821799/164883086-134b04a1-099c-4a6d-80b1-7640b0481347.png)
+
 ### Files life cycle summary
 
 ![file-life-cycle](https://user-images.githubusercontent.com/11821799/51426727-375f4600-1c21-11e9-82f2-f95112e20cd1.png)
+
+### Terminologies and commands summary
+#### Commands
+- `git init` : `adding` git into your project
+- `git add` : moving files from `untracked` or `modified` to `staging` area.
+- `git commit` : `saving` your changes into git timeline.
+- `git log` : list out previous commits in historical order.
+- `git status` : displays files that have differences between the current values in your directory and the latest commit
+
+#### Terminologies
+- `untracked` : unknown changes/files from git's point of view.
+- `staged` : changes prepared in the staging area for your next commit.
+- `committed` : changes stored in your git repository.
+- `modified` : changes made to your project working directory.
+
 
 ## Putting the project on remote server
 
@@ -137,13 +162,19 @@ At this point, you will have a git repository on Github's server ready for stori
 Follow the instructions under the section that says  
 "…or push an existing repository from the command line"
 
-For now, execute only the first line.
+Before we start executing commands, let's configure a ssh public key and assign to GitHub by following the steps [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+You can copy your project ssh link here and then apply with the below command.
+![ssh-link](https://user-images.githubusercontent.com/11821799/164886040-c41135f6-4834-41be-8a48-0cbeefc531e0.png)
+
+Execute only the first line.
 
 ```sh
 git remote add origin <remote_address>
 ```
 
 After you finish with the command above. Your git on the local project will know which repository on Github server that needs to be linked with.
+
 
 #### 6. Pushing the repository into Github server
 
@@ -180,17 +211,21 @@ You assume that LICENSE file is not useful so you decide to remove it.
 3. run command `git revert <commit id>`
 4. Commit and push the change
 
+What just happen was you made the mistake and already committed to that mistake. We are not trying to go back in time and change the history as if the mistake never happen. However, what we are trying to do is to create another commit down into the project timeline to undo our mistake. The history still record every action that we made.
+![revert-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--eckmvr2M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/3kkd2ahn41zixs12xgpf.gif) 
+
 ## Undo un-committed change
 
 1. Delete all content of README.md file.
 2. Save and close your editor window
-3. _Take a break_
 
 #### Discard changes
 
 ```sh
 git checkout -- <file_path>
 ```
+
+As the result of this action, your changes are being discarded, and the file is going back to its unmodified state.
 
 # Collaboration
 
@@ -228,6 +263,8 @@ Changes made in remote repository is not known to the local repository until you
 git fetch
 ```
 
+![fetching-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--38PuARw2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/bulx1voegfji4vwgndh4.gif)
+
 Now, if you run `git status` again. You will see ....
 
 ```
@@ -250,6 +287,8 @@ Notice that it takes 2 commands to sync your branch with the one on the remote s
 git pull
 ```
 
+![pulling-gif](https://res.cloudinary.com/practicaldev/image/fetch/s---X5AXldj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zifpnl1h6a4tk4qdc9sy.gif)
+
 #### Merge conflict
 
 It is also possible that remote and local repository are being edited on the same spot. With the scenario like, this Git needs your help to resolve conflicts.
@@ -262,6 +301,10 @@ It is also possible that remote and local repository are being edited on the sam
 4. Commit the change from github's website.
 5. Back to your local repository, now you can try to push the commit you just made on step 2.
 6. Git will tell you that pushing process is facing some problem. Can you make a guess what is wrong ?
+
+![conflict](https://res.cloudinary.com/practicaldev/image/fetch/s--jXqGWUai--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/m3nxmp67mqof5sa3iik9.png)
+
+That's right multiple people can accidentally or intentionally make change on the same place. It is our job as developers to help git out and resolving the situation. 
 
 #### Resolving merge conflict
 
@@ -290,6 +333,21 @@ Git provides `branch` feature to allow developers to **encapsulate changes** tha
 So each developer can be sure that the code they have written is secured and will not affect on others' code.
 
 ##### Branching Basics
+Basic tax application example
+![branching](https://user-images.githubusercontent.com/11821799/164887856-369bd591-2439-40bd-86b0-9bd4db3ac42a.png)
+
+This is an example of a government website project where it manages tax of Thai citizens.
+The website is working fine. However, as the new year has begun. The citizens have to submit their tax form to the government.
+
+Due to COVID-19 situation, the government has updated their refund policy. At the same time, in parallel they are also preparing for the coming year new post-COVID-19 tax calculation method.
+
+The website is running base on the `master` branch. We cannot risk of having the website break because this is an important website that Thai citizens need to come and look up the information to prepare the tax document.
+
+Two developer create their own branch `2021` and `2022` to work on their part from the latest code of `master`.
+
+The branching mechanism ensures that both developers have the latest code of the running website as their base to build whatever they need.
+
+While also ensuring that their change will not take any effect until they are ready to. 
 
 ###### Creating a new branch
 
@@ -320,20 +378,6 @@ Now, the `*` should be in front of your <branch_name>
 * <branch_name>
 ```
 
-# Workshop
-
-1. Create a new branch called `remove-readme`
-2. After that, make sure you switch to a new branch
-3. Remove `README.md` and make a commit
-4. Push and create upstream for this branch. (You did it once in the beginning of the workshop.)
-5. What if you want to update master branch with this change ?
-
-### Reverting changes
-
-At this point, your should merged your `remove-readme` branch with `master` branch and push the change.
-
-`README.md` will be deleted from your repository both at `remote` and `local`.
-
-It is important to bring the file back since it contains many important information about this workshop.
-
-Do you recall how to revert a commit ?
+# Software Quality Assurance
+- What if you want to update master branch with this change ?
+- How do you know that your changes are ready ?
