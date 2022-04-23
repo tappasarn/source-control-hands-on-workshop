@@ -162,13 +162,19 @@ At this point, you will have a git repository on Github's server ready for stori
 Follow the instructions under the section that says  
 "…or push an existing repository from the command line"
 
-For now, execute only the first line.
+Before we start executing commands, let's configure a ssh public key and assign to GitHub by following the steps [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+You can copy your project ssh link here and then apply with the below command.
+![ssh-link](https://user-images.githubusercontent.com/11821799/164886040-c41135f6-4834-41be-8a48-0cbeefc531e0.png)
+
+Execute only the first line.
 
 ```sh
 git remote add origin <remote_address>
 ```
 
 After you finish with the command above. Your git on the local project will know which repository on Github server that needs to be linked with.
+
 
 #### 6. Pushing the repository into Github server
 
@@ -205,6 +211,9 @@ You assume that LICENSE file is not useful so you decide to remove it.
 3. run command `git revert <commit id>`
 4. Commit and push the change
 
+What just happen was you made the mistake and already committed to that mistake. We are not trying to go back in time and change the history as if the mistake never happen. However, what we are trying to do is to create another commit down into the project timeline to undo our mistake. The history still record every action that we made.
+![revert-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--eckmvr2M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/3kkd2ahn41zixs12xgpf.gif) 
+
 ## Undo un-committed change
 
 1. Delete all content of README.md file.
@@ -216,6 +225,8 @@ You assume that LICENSE file is not useful so you decide to remove it.
 ```sh
 git checkout -- <file_path>
 ```
+
+As the result of this action, your changes are being discarded, and the file is going back to its unmodified state.
 
 # Collaboration
 
@@ -253,6 +264,8 @@ Changes made in remote repository is not known to the local repository until you
 git fetch
 ```
 
+![fetching-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--38PuARw2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/bulx1voegfji4vwgndh4.gif)
+
 Now, if you run `git status` again. You will see ....
 
 ```
@@ -275,6 +288,8 @@ Notice that it takes 2 commands to sync your branch with the one on the remote s
 git pull
 ```
 
+![pulling-gif](https://res.cloudinary.com/practicaldev/image/fetch/s---X5AXldj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zifpnl1h6a4tk4qdc9sy.gif)
+
 #### Merge conflict
 
 It is also possible that remote and local repository are being edited on the same spot. With the scenario like, this Git needs your help to resolve conflicts.
@@ -287,6 +302,10 @@ It is also possible that remote and local repository are being edited on the sam
 4. Commit the change from github's website.
 5. Back to your local repository, now you can try to push the commit you just made on step 2.
 6. Git will tell you that pushing process is facing some problem. Can you make a guess what is wrong ?
+
+![conflict](https://res.cloudinary.com/practicaldev/image/fetch/s--jXqGWUai--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/m3nxmp67mqof5sa3iik9.png)
+
+That's right multiple people can accidentally or intentionally make change on the same place. It is our job as developers to help git out and resolving the situation. 
 
 #### Resolving merge conflict
 
