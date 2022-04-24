@@ -378,6 +378,59 @@ Now, the `*` should be in front of your <branch_name>
 * <branch_name>
 ```
 
+
+# Learning from Git
+
+
+### Browse opensource software
+Git is more than just a tool for storing code or keeping track of changes. It supports the opensource development community. It allows people all over the world to collaborate effectively to build software. Git itself is an opensource https://github.com/git/git so if you're curious about how each commands is actually implemented. Go directly to the source code. Whatever you're interested it's there.
+1. Operating system? Take a look at Linux https://github.com/torvalds/linux
+2. Web browser? Peek here https://github.com/chromium/chromium
+3. Enjoy music? Check out this trained model for source seperation https://github.com/facebookresearch/demucs
+
+### It's not only about software
+There a so many documentation, list and concepts being stored on git. People contributes and add more information to the repository and it always get updated with the latest info. It's like Wikipedia!
+
+See these repository for examples
+1. Javascript clean code guidelines https://github.com/ryanmcdermott/clean-code-javascript
+2. Front-end developer interview questions https://github.com/h5bp/Front-end-Developer-Interview-Questions
+
+
+### Don't just commit - make sure it provides context for future references
+> A commit is making snapshots permanently in version history. 
+
+Take this commit history example. Suppose we found a bug and we want to know when it got introduced.
+```
+- Fix style
+- Fix style
+- Fix style
+- bump version
+- It's finally done
+- wtf
+```
+
+and compare to this
+```
+- Update readme
+- Add unit test 
+- Fix bad grammar
+- Upgrade react
+```
+
+or this
+
+```
+- feat: 🎸 add MusicCard
+- chore: 🤖 update e2e to run only master
+- docs: ✏️ add MusicCard doc
+- fix: 🐛 unit tests
+- style: 💄 change card page style to grid
+- ⬆️ Upgrade go version to 1.17.2
+```
+
+See https://www.conventionalcommits.org/en/v1.0.0/ and https://gitmoji.dev/ for this style. However, being fancy doesn't mean it's always useful it's just provide more context and contrast - the idea is to have meaningful commits that can be easily referenced in the future. For example, this repository only contains documents README.md so it doesn't really benefit much from tags or icons because all we do it update the documents. We'll stick with messages that make sense in this context. e.g. "Add git revert section", "Add images", "Fix grammars".
+
+
 # Software Quality Assurance
 - What if you want to update master branch with this change ?
 - How do you know that your changes are ready ?
