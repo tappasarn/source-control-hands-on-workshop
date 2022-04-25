@@ -345,6 +345,8 @@ Basic tax application example
 
 ![branching](https://user-images.githubusercontent.com/11821799/164887856-369bd591-2439-40bd-86b0-9bd4db3ac42a.png)
 
+([*try your own visualization*](https://git-school.github.io/visualizing-git/))
+
 This is an example of a government website project where it manages tax of Thai citizens.
 The website is working fine. However, as the new year has begun. The citizens have to submit their tax form to the government.
 
