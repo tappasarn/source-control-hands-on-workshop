@@ -113,6 +113,7 @@ Next, to save this change. You will have to add `README.md` into the staging are
 ![modified](https://user-images.githubusercontent.com/11821799/164883039-62972412-cbac-4c05-90a1-11439d83c012.png)
 ![staged](https://user-images.githubusercontent.com/11821799/164883046-7885eb2b-9b48-4c69-a2e4-ac54dc97d023.png)
 ![commited](https://user-images.githubusercontent.com/11821799/164883086-134b04a1-099c-4a6d-80b1-7640b0481347.png)
+([*image reference*](https://blog.wakanda.io/animated-git-1-gain-precise-control-next-commit/))
 
 ### Files life cycle summary
 
@@ -216,6 +217,7 @@ You assume that LICENSE file is not useful so you decide to remove it.
 
 What just happen was you made the mistake and already committed to that mistake. We are not trying to go back in time and change the history as if the mistake never happen. However, what we are trying to do is to create another commit down into the project timeline to undo our mistake. The history still record every action that we made.
 ![revert-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--eckmvr2M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/3kkd2ahn41zixs12xgpf.gif) 
+([*gif reference*](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1))
 
 ## Undo un-committed change
 
@@ -267,6 +269,7 @@ git fetch
 ```
 
 ![fetching-gif](https://res.cloudinary.com/practicaldev/image/fetch/s--38PuARw2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/bulx1voegfji4vwgndh4.gif)
+([*gif reference*](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1))
 
 Now, if you run `git status` again. You will see ....
 
@@ -291,6 +294,7 @@ git pull
 ```
 
 ![pulling-gif](https://res.cloudinary.com/practicaldev/image/fetch/s---X5AXldj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zifpnl1h6a4tk4qdc9sy.gif)
+([*gif reference*](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1))
 
 #### Merge conflict
 
@@ -306,6 +310,7 @@ It is also possible that remote and local repository are being edited on the sam
 6. Git will tell you that pushing process is facing some problem. Can you make a guess what is wrong ?
 
 ![conflict](https://res.cloudinary.com/practicaldev/image/fetch/s--jXqGWUai--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/m3nxmp67mqof5sa3iik9.png)
+([*image reference*](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1))
 
 That's right multiple people can accidentally or intentionally make change on the same place. It is our job as developers to help git out and resolving the situation. 
 
