@@ -162,11 +162,10 @@ You can think of a repository as a place on Github's server that is available to
 At this point, you will have a git repository on Github's server ready for storing your local copy. You will see instructions to either create a repository or push an existing repository.
 
 #### 5. Add remote server
+Before we start executing commands, let's configure a ssh public key and assign to GitHub by following the steps [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 Follow the instructions under the section that says  
 "…or push an existing repository from the command line"
-
-Before we start executing commands, let's configure a ssh public key and assign to GitHub by following the steps [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 You can copy your project ssh link here and then apply with the below command.
 ![ssh-link](https://user-images.githubusercontent.com/11821799/164886040-c41135f6-4834-41be-8a48-0cbeefc531e0.png)
