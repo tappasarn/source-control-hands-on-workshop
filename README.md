@@ -167,15 +167,6 @@ Before we start executing commands, let's configure a ssh public key and assign 
 Follow the instructions under the section that says  
 "…or push an existing repository from the command line"
 
-You can copy your project ssh link here and then apply with the below command.
-![ssh-link](https://user-images.githubusercontent.com/11821799/164886040-c41135f6-4834-41be-8a48-0cbeefc531e0.png)
-
-Execute only the first line.
-
-```sh
-git remote add origin <remote_address>
-```
-
 After you finish with the command above. Your git on the local project will know which repository on Github server that needs to be linked with.
 
 
