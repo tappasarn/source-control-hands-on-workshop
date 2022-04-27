@@ -1,6 +1,6 @@
 # SOURCE CONTROL HANDS ON WORKSHOP
 
-Hello World
+Hello World Bye
 
 ## Table of content
 
